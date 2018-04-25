@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Calibri', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  overflow: hidden;
+}
+.number-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 500px;
+  background-color: black;
+}
+.number-list li {
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.number-list li.highlight {
+  transition: margin 0.2s cubic-bezier(0.03, 0.74, 0.13, 0.98);
+}
+.number-list li.insert-before {
+  margin-top: 100px;
+}
+.number-list li + li {
+  border-top: none;
+}
+.extracted {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  box-shadow: 0 0 20px #333 !important;
+  border: 1px solid black !important;
+}
+.extracted.animated {
+  transition: transform 0.3s cubic-bezier(0.03, 0.74, 0.13, 0.98) !important;
+}
